@@ -5,9 +5,9 @@ class Task
   public $description;
   protected $completed = false;
 
-  function __construct($description)
+  function __construct()
   {
-    $this->description = $description;
+    //$this->description = $description;
   }
 
   function complete()

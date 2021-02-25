@@ -2,7 +2,7 @@
 
 function dd($data)
 {
-echo '
+  echo '
 <pre>';
   die(var_dump($data));
   echo '</pre>';

@@ -14,7 +14,7 @@
   <?php foreach ($tasks as $task) : ?>
     <ul>
       <li><?= $task->description ?></li>
-      <li><?= $task->completed ? '&#9989' : 'incomplete' ?></li>
+      <li><?= $task->isCompleted() ? '&#9989' : 'incomplete' ?></li>
     </ul>
   <?php endforeach; ?>
 
