@@ -1,5 +1,5 @@
 <?php
 
-$tasks = $query->SelectAll('todos', 'Task');
+$users = App::get('database')->selectAllSimple('users');
 
 require 'views/index.view.php';

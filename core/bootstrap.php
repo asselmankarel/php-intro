@@ -1,6 +1,5 @@
 <?php
-$config = require 'config.php';
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
 
-$query = new QueryBuilder(Connection::Make($config['database']));
+App::bind('config', require 'config.php');
+
+App::bind('database', new QueryBuilder(Connection::Make(App::get('config')['database'])));

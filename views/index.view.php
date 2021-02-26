@@ -10,13 +10,18 @@
 
 <body>
 
+  <?php require('partials/nav.php'); ?>
 
-  <?php foreach ($tasks as $task) : ?>
-    <ul>
-      <li><?= $task->description ?></li>
-      <li><?= $task->isCompleted() ? '&#9989' : 'incomplete' ?></li>
-    </ul>
-  <?php endforeach; ?>
+  <form action="/names" method="POST">
+    <input type="text" name="name" />
+    <input type="submit" />
+  </form>
+
+  <ul>
+    <?php foreach ($users as $user) : ?>
+      <li><?= $user['name']; ?></li>
+    <?php endforeach; ?>
+  </ul>
 
 
 </body>
