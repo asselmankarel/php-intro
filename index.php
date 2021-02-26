@@ -1,10 +1,9 @@
 <?php
 require 'helpers/common.php';
 require 'models/Task.php';
-require 'bootstrap.php';
+require 'core/bootstrap.php';
+require 'core/Router.php';
+require 'core/Request.php';
 
-$tasks = $query->SelectAll('todos', 'Task');
 
-// dd($tasks);
-
-require './views/index.view.php';
+require Router::load('routes.php')->direct(Request::uri());
