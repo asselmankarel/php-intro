@@ -12,7 +12,7 @@
 
   <?php require('partials/nav.php'); ?>
 
-  <form action="/names" method="POST">
+  <form action="/users" method="POST">
     <input type="text" name="name" />
     <input type="submit" />
   </form>
